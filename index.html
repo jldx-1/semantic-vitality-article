@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Semantic Vitality: A Semantic Axiom for Life and Artificial General Intelligence</title>
+  <meta name="description"
+    content="Semantic Vitality proposes an axiomatic framework for life based on sustained meaning-bearing processes across micro and macro scales." />
+  <meta name="author" content="Jean-Luc DeRieux" />
+
+  <meta property="og:title" content="Semantic Vitality" />
+  <meta property="og:description" content="A semantic axiom for life and artificial general intelligence." />
+  <meta property="og:type" content="article" />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --panel: #f7f8fa;
+      --text: #1e2329;
+      --muted: #626a73;
+      --line: #e4e7eb;
+      --accent: #2158d4;
+      --accent-soft: #eef3ff;
+      --max: 880px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.72;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(2rem, 5vw, 3.55rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      font-weight: 780;
+    }
+
+    .subtitle {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .author {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .author strong {
+      color: var(--text);
+    }
+
+    .abstract {
+      margin-top: 34px;
+      padding: 22px 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    .abstract h2 {
+      margin-top: 0;
+      font-size: 1rem;
+      letter-spacing: .02em;
+    }
+
+    .keywords {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    nav {
+      margin: 34px 0 8px;
+      padding: 18px 20px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    nav strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: .9rem;
+    }
+
+    nav ol {
+      columns: 2;
+      column-gap: 32px;
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    nav li {
+      break-inside: avoid;
+      margin: 5px 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    main {
+      padding: 34px 0 70px;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+      margin-top: 56px;
+    }
+
+    section:first-child {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 1.72rem;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 34px 0 12px;
+      font-size: 1.22rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .axiom {
+      margin: 28px 0;
+      padding: 22px 24px;
+      background: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      font-size: 1.08rem;
+    }
+
+    .axiom strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .axioms li {
+      margin: 9px 0;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 26px 0 34px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      background: #fff;
+      font-size: .91rem;
+      line-height: 1.5;
+    }
+
+    caption {
+      padding: 16px 18px 8px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid var(--line);
+    }
+
+    th {
+      background: var(--panel);
+      font-size: .84rem;
+      letter-spacing: .015em;
+    }
+
+    .note {
+      margin: 24px 0;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--muted);
+      background: #fcfcfd;
+      font-size: .93rem;
+    }
+
+    .cite {
+      color: var(--muted);
+      font-size: .82em;
+      white-space: nowrap;
+    }
+
+    footer {
+      padding: 28px 0 48px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+
+    .references {
+      padding-left: 0;
+      list-style: none;
+      counter-reset: refs;
+    }
+
+    .references li {
+      position: relative;
+      margin: 0 0 16px;
+      padding-left: 42px;
+      color: var(--text);
+      font-size: .92rem;
+      overflow-wrap: anywhere;
+    }
+
+    .references li::before {
+      content: "[" counter(refs) "]";
+      counter-increment: refs;
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .references .ref-title {
+      font-weight: 600;
+    }
+
+    @media (max-width: 680px) {
+      header {
+        padding-top: 46px;
+      }
+
+      nav ol {
+        columns: 1;
+      }
+
+      .abstract {
+        padding: 18px;
+      }
+
+      h1 {
+        letter-spacing: -0.035em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">Research Article</p>
+      <h1>Semantic Vitality: A Semantic Axiom for Life and Artificial General Intelligence</h1>
+      <p class="subtitle">
+        A process-based framework for defining life through the creation, interpretation,
+        maintenance, and relay of meaningful states.
+      </p>
+
+      <div class="author">
+        <strong>Jean-Luc DeRieux</strong>
+        <span>·</span>
+        <a href="https://github.com/jldx-1" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="https://x.com/jldx_" target="_blank" rel="noopener">X</a>
+        <span>·</span>
+        <a href="https://www.linkedin.com/in/jeanlucderieux/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <div class="abstract">
+        <h2>Abstract</h2>
+        <p>
+          Definitions of life remain contested because familiar criteria such as metabolism,
+          reproduction, autonomy, homeostasis, and Darwinian evolution each fail in important
+          borderline cases. Sterile organisms, viruses, obligate parasites, dormant organisms,
+          endosymbionts, and possible artificial agents reveal that no single terrestrial
+          mechanism is sufficient as a universal criterion. This article proposes
+          <em>Semantic Vitality</em>, an axiomatic account of life in which a system is living
+          when it sustains meaning-bearing processes across micro or macro scales and relays
+          information through internal or external semantic pathways. The framework distinguishes
+          four dimensions of life-processes: micro-internal, micro-external, macro-internal, and
+          macro-external semantics. These dimensions clarify how familiar biological systems remain
+          alive even when they lack individual reproduction or independent metabolism, and they also
+          provide a cautious way to evaluate artificial intelligence as a possible form of life once
+          self-maintaining semantic organization is achieved. Semantic Vitality is not intended to
+          replace empirical biology, but to provide a general conceptual bridge between terrestrial
+          biology, astrobiology, artificial life, and future artificial general intelligence.
+        </p>
+        <div class="keywords">
+          <strong>Keywords:</strong> semantic vitality, definitions of life, artificial general
+          intelligence, astrobiology, artificial life, biological semantics
+        </div>
+      </div>
+
+      <nav aria-label="Table of contents">
+        <strong>Contents</strong>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#definitions">Definitions of Life and Their Limitations</a></li>
+          <li><a href="#semantic-vitality">Semantic Vitality</a></li>
+          <li><a href="#religion-uap">Scope: Metaphysics, Extraterrestrial Life, and UAP</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#ai-agi">Artificial Intelligence and AGI</a></li>
+          <li><a href="#discussion">Discussion</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#references">References</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <main>
+      <section id="introduction">
+        <h2>1. Introduction</h2>
+
+        <p>
+          The question “What is life?” remains one of the most persistent problems in biology,
+          philosophy, astrobiology, and artificial intelligence. The difficulty is not that living
+          things lack recognizable features. Most familiar organisms metabolize, grow, respond to
+          stimuli, maintain internal organization, and reproduce. The difficulty is that these
+          features do not behave like strict axioms. Some organisms are sterile. Some biological
+          agents depend on hosts. Some cells enter dormant states in which metabolism is radically
+          reduced. Some systems communicate, adapt, and preserve internal order without possessing
+          nervous systems. These cases suggest that the definition of life should not be reduced to
+          any single mechanism, because the mechanisms of life can change across scale, substrate,
+          and historical context.
+        </p>
+
+        <p>
+          The problem becomes more urgent in two contemporary settings. The first is astrobiology.
+          If life exists beyond Earth, it may not possess the same biochemistry, cellular
+          organization, or ecological history as terrestrial life. A definition built only from
+          known Earth organisms may therefore fail when applied to Mars, icy moons, exoplanets, or
+          synthetic laboratory systems. The second setting is artificial intelligence. Current
+          artificial intelligence systems are not generally alive in the biological sense, but
+          they increasingly process representations, communicate with humans, interact with
+          environments, and participate in decision-making loops. If future artificial general
+          intelligence (AGI) develops self-maintaining organization and persistent internal
+          regulation, then the boundary between machine intelligence and artificial life will
+          become more difficult to describe.
+        </p>
+
+        <p>
+          This article proposes <em>Semantic Vitality</em> as a specific axiomatic framework for
+          defining life through meaning-bearing organization. The proposal belongs to a broader
+          intellectual tradition that includes biosemiotics and semantic approaches to biology, but
+          it introduces a distinct set of operational dimensions and dependence criteria. The central
+          claim is that life is best understood as a process that creates, maintains, interprets,
+          and transmits meaningful states. On this view, metabolism, reproduction,
+          cognition, communication, and evolution are not unrelated checklist items. They are
+          different expressions of semantic organization. A genome is semantic because it is
+          interpreted by cellular machinery. A nervous system is semantic because it transforms
+          signals into internal representations and actions. A pheromone trail is semantic because
+          it changes the behavior of other organisms. A social or technological system is semantic
+          when it preserves and transmits meaning across agents and time.
+        </p>
+
+        <p>
+          The goal of this article is not to claim that every information-processing system is alive.
+          A hard drive, a book, or a static dataset stores information, but it does not by itself
+          sustain semantic vitality. Semantic Vitality requires active organization: the system
+          must preserve, transform, or transmit semantic states in a way that contributes to its
+          own continued organization or to the continued organization of the living network in
+          which it participates. This condition helps separate living semantic processes from
+          passive information storage.
+        </p>
+      </section>
+
+      <section id="definitions">
+        <h2>2. Definitions of Life and Their Limitations</h2>
+
+        <p>
+          A common biological account treats living systems as entities that display organization,
+          metabolism, homeostasis, growth, reproduction, and response to stimuli. This view is
+          pedagogically useful because it captures many ordinary organisms, especially animals,
+          plants, fungi, and microbes. However, it is not precise enough to settle borderline cases.
+          Sterile organisms such as mules do not reproduce. Viruses reproduce only through
+          host-cell machinery. Dormant organisms can temporarily suspend or radically reduce
+          metabolism while still plausibly remaining alive. Thus, the checklist approach is useful
+          descriptively, but it is too loose to function as a universal axiom.
+        </p>
+
+        <p>
+          One influential astrobiological definition is the NASA working definition: life is a
+          “self-sustaining chemical system capable of Darwinian evolution”
+          <a class="cite" href="#ref-1">[1]</a>. This definition is powerful because it
+          links life to chemistry, heredity, variation, and natural selection rather than to a
+          fixed Earth-bound checklist. It is especially useful for astrobiology because it directs
+          attention toward systems that maintain themselves and evolve across generations. Because
+          the definition is most naturally applied at the level of a self-sustaining system,
+          population, or lineage, it is less direct as a criterion for classifying an individual
+          non-reproductive organism. A mule, a sterile worker ant, or a post-reproductive organism
+          remains alive even though that individual may not reproduce. Likewise, viruses evolve but
+          are not self-sustaining in the same way as cells, since they depend on host metabolism.
+        </p>
+
+        <p>
+          A thermodynamic definition, associated with Schrödinger’s <em>What is Life?</em>,
+          emphasizes that living organisms maintain internal order by drawing free energy from
+          their environment and delaying thermodynamic equilibrium
+          <a class="cite" href="#ref-2">[2]</a>. This view captures an important physical
+          feature of life: organisms are far-from-equilibrium systems that continually exchange
+          energy and matter with their surroundings. However, thermodynamic order-maintenance is
+          too broad by itself. Flames, hurricanes, convection cells, and many chemical reaction
+          networks also dissipate energy and maintain ordered structures without being alive.
+        </p>
+
+        <p>
+          Autopoietic definitions, developed by Maturana and Varela, define living systems as
+          self-producing networks that generate and maintain their own organization and boundaries
+          <a class="cite" href="#ref-5">[5]</a>. This view is attractive because it
+          focuses on autonomy, self-maintenance, and circular biological organization. It fits
+          cells especially well: a cell produces components that help maintain the membrane,
+          metabolism, and internal organization that make continued production possible. Its
+          weakness is that it can underemphasize heredity, communication, and open-ended
+          evolution. A self-maintaining chemical vesicle might count as autopoietic even if it
+          lacks the capacity for long-term evolutionary transformation.
+        </p>
+
+        <p>
+          Fleischaker later developed autopoiesis as an operational definition of life, emphasizing
+          metabolic self-production, the interdependence of biochemical processes, and the role of
+          a boundary in maintaining the continuity of the process network
+          <a class="cite" href="#ref-6">[6]</a>. This operational emphasis is valuable for
+          laboratory work, although it remains centered on biochemical self-production and therefore
+          does not by itself address the broader question of whether meaning-bearing organization
+          could occur in non-biological substrates.
+        </p>
+
+        <p>
+          Another approach defines life through autonomy and open-ended evolution. Ruiz-Mirazo,
+          Peretó, and Moreno argue that life requires both individual self-maintenance and
+          participation in an evolutionary process capable of generating indefinitely many new
+          forms <a class="cite" href="#ref-7">[7]</a>. This improves on simple
+          metabolism-only or reproduction-only accounts because it combines organism-level
+          autonomy with population-level historical change. However, it can be difficult to
+          operationalize. It is not always clear how much autonomy is enough, or how one should
+          test open-ended evolutionary potential in a borderline artificial, prebiotic, or
+          extraterrestrial system.
+        </p>
+
+        <p>
+          A more skeptical philosophical approach is defended by Cleland and Chyba, who argue that
+          the search for a definition of life may be premature
+          <a class="cite" href="#ref-3">[3]</a>. On their view, biology may be in a
+          position similar to chemistry before the molecular theory of water: scientists could
+          describe water, but they could not yet define it as H<sub>2</sub>O. The lesson is that a
+          successful definition of life may require a deeper general theory of living systems.
+          This position avoids overly narrow definitions, but it offers less immediate guidance for
+          laboratory classification, astrobiological missions, or debates about artificial life.
+        </p>
+
+        <p>
+          Trifonov’s meta-definition takes a different route by comparing many published
+          definitions and extracting their common vocabulary. From 123 definitions, he concludes
+          that the minimal recurring core is “self-reproduction with variations”
+          <a class="cite" href="#ref-4">[4]</a>. This is elegant and concise because it captures
+          heredity and evolutionary change in only a few words. But it inherits the standard
+          reproduction problem: sterile organisms, non-reproductive castes, and individual
+          organisms outside reproductive age remain alive even if they do not personally
+          reproduce. It also leaves unclear whether viruses or artificial replicators should be
+          treated as living.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Major definitions of life and their limitations.</caption>
+            <thead>
+              <tr>
+                <th>Definition or Approach</th>
+                <th>Core Criterion</th>
+                <th>Limitation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Biological checklist</td>
+                <td>Organization, metabolism, homeostasis, growth, reproduction, and response</td>
+                <td>Too descriptive and not axiomatic; sterile organisms, dormant organisms, viruses, and borderline
+                  artificial systems challenge one or more criteria.</td>
+              </tr>
+              <tr>
+                <td>NASA working definition</td>
+                <td>Self-sustaining chemical system capable of Darwinian evolution</td>
+                <td>Treats life mainly at the population or lineage level; struggles with individual non-reproductive
+                  organisms and with viruses that evolve but are not self-sustaining.</td>
+              </tr>
+              <tr>
+                <td>Schrödinger’s thermodynamic view</td>
+                <td>Maintenance of order through environmental free energy</td>
+                <td>Too broad; non-living dissipative systems such as fire, hurricanes, and convection patterns also
+                  maintain ordered structure far from equilibrium.</td>
+              </tr>
+              <tr>
+                <td>Autopoiesis</td>
+                <td>Self-producing system that maintains its own organization and boundary</td>
+                <td>Strong for cells, but weaker for heredity and evolution; may include self-maintaining systems that
+                  do not evolve.</td>
+              </tr>
+              <tr>
+                <td>Autonomy and open-ended evolution</td>
+                <td>Individual self-maintenance plus historical evolutionary capacity</td>
+                <td>More complete but harder to test; autonomy and open-endedness are difficult to measure in marginal
+                  cases.</td>
+              </tr>
+              <tr>
+                <td>Definitional pessimism</td>
+                <td>A definition should await a deeper theory of life</td>
+                <td>Avoids premature definitions but gives no immediate operational test for life-detection missions or
+                  laboratory classification.</td>
+              </tr>
+              <tr>
+                <td>Trifonov’s meta-definition</td>
+                <td>Self-reproduction with variations</td>
+                <td>Concise but overemphasizes reproduction; sterile organisms and non-reproductive castes remain
+                  problematic.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="semantic-vitality">
+        <h2>3. Semantic Vitality</h2>
+
+        <h3>Relation to Biosemiotics and Semantic Biology</h3>
+        <p>
+          Semantic Vitality is not the first attempt to connect life with meaning or semiosis.
+          Emmeche explicitly examined the possibility of defining life as a semiotic phenomenon
+          <a class="cite" href="#ref-18">[18]</a>, and the broader field of biosemiotics studies
+          living systems in terms of signs, codes, interpretation, and meaning. Barbieri, for
+          example, argues that biological semiosis is grounded in real organic codes and has
+          developed this position through biosemiotics and code biology
+          <a class="cite" href="#ref-19">[19]</a>. More recent work in code biology describes a
+          perspective in which life involves chemistry, information, and meaning
+          <a class="cite" href="#ref-20">[20]</a>.
+        </p>
+
+        <p>
+          Semantic Vitality builds on this general insight but makes a different contribution. It
+          organizes semantic activity along two explicit axes—<em>scale</em> (micro or macro) and
+          <em>direction</em> (internal or external)—and adds semantic continuity and semantic
+          dependence as working criteria. These additions are intended to make the framework useful
+          for comparing autonomous organisms, dependent biological agents, collective systems,
+          extraterrestrial candidates, and artificial agents without requiring every living system
+          to share the same material substrate.
+        </p>
+
+        <p>
+          Semantic Vitality defines life not by a single biological mechanism, such as metabolism,
+          reproduction, cellularity, or nervous activity, but by the presence of sustained
+          meaning-producing processes. The framework begins from the observation that living
+          systems are organized around interpretation. Molecules, signals, memories, gestures,
+          behaviors, and environmental modifications become biologically significant because they
+          stand for something to the system that uses them. A chemical gradient can represent
+          direction. A codon can represent an amino acid within a translational system. A neural
+          pattern can represent a perception or intention. A bird call can represent alarm,
+          location, or social relation. In each case, the physical substrate matters, but life is
+          not reducible to the substrate alone. It also depends on the organized interpretation of
+          the substrate.
+        </p>
+
+        <p>
+          In this framework, <em>semantic</em> does not mean merely that two states are correlated or
+          that a device maps an input to an output. A state is semantic when it is interpreted
+          within an organized system as a signal, instruction, representation, or constraint, and
+          when that interpretation has consequences for regulation, adaptation, continuity, or
+          lineage. A conventional thermostat, database, or static program therefore does not qualify
+          merely because it processes information: its input-output mapping is not, by itself, a
+          self-maintaining network that preserves or regenerates the semantic relations relevant to
+          its own continued organization.
+        </p>
+
+        <div class="axiom">
+          <strong>Central Axiom</strong>
+          A system is alive when it sustains semantic processes across micro or macro scales and
+          relays meaningful information through internal or external semantic pathways.
+        </div>
+
+        <p>
+          This axiom contains three key terms. First, <em>sustains</em> means that the semantic
+          process is not a passive trace or accidental pattern. It must be maintained, used, or
+          regenerated by the system or by a larger living network in which the system participates.
+          Second, <em>semantic processes</em> are processes that create, preserve, interpret,
+          transform, or transmit meaningful states. Third, <em>pathways</em> refers to the direction
+          through which semantic information moves: inwardly within the system, outwardly toward
+          other systems, or both.
+        </p>
+
+        <p>
+          Semantic Vitality distinguishes two axes of living semantic activity. The first axis is
+          <em>scale</em>. Here, micro and macro refer to the organizational level at which
+          interpretation and regulatory consequences occur, not simply to the physical size of the
+          signal carrier. Microsemantic processes occur at molecular, cellular, sub-organismic,
+          neural, or computational scales. These include gene expression, cell signaling, metabolic
+          regulation, immune recognition, neural processing, and intracellular feedback.
+          Macrosemantic processes occur at organismal, behavioral, ecological, social, or
+          technological scales. These include locomotion, communication, collective behavior,
+          cultural transmission, environmental modification, and long-term evolutionary change.
+        </p>
+
+        <p>
+          The second axis is <em>direction</em>. Internal semantics refers to meaning-bearing
+          processes that regulate the system from within. Examples include a human thinking, a cell
+          responding to chemical signals, or an organism maintaining homeostasis through feedback.
+          External semantics refers to meaning-bearing processes expressed outwardly and made
+          available to other systems. Examples include speech, writing, mating displays, bird
+          calls, spider courtship dances, pheromone trails, nest construction, and tool use.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>The four semantic dimensions of Semantic Vitality.</caption>
+            <thead>
+              <tr>
+                <th>Semantic Type</th>
+                <th>Definition</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Micro-internal semantics</td>
+                <td>Meaning-bearing processes inside a living system at molecular, cellular, neural, or computational
+                  scales</td>
+                <td>DNA transcription, protein synthesis, cell signaling, neural processing, immune recognition,
+                  metabolic regulation.</td>
+              </tr>
+              <tr>
+                <td>Micro-external semantics</td>
+                <td>Small-scale signals transmitted among cells, organisms, or biological agents</td>
+                <td>Quorum sensing, ligand-receptor signaling, viral host-recognition processes, intercellular chemical
+                  gradients.</td>
+              </tr>
+              <tr>
+                <td>Macro-internal semantics</td>
+                <td>Large-scale internal organization of an organism or collective system</td>
+                <td>Cognition, memory, organism-level homeostasis, coordinated development, internal decision-making.
+                </td>
+              </tr>
+              <tr>
+                <td>Macro-external semantics</td>
+                <td>Outward expression of meaning into the environment or toward other agents</td>
+                <td>Speech, writing, animal calls, pheromone trails, courtship displays, migration patterns,
+                  nest-building, cultural transmission.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          The framework can also be stated as a set of working axioms. These criteria are intended
+          to operate jointly: no single item is sufficient by itself. A candidate for full Semantic
+          Vitality should satisfy all five either autonomously or, in explicitly dependent cases, as
+          an active component of a coupled living network.
+        </p>
+        <ol class="axioms">
+          <li><strong>Semantic generation:</strong> life generates or maintains meaningful states rather than merely
+            containing inert information.</li>
+          <li><strong>Semantic interpretation:</strong> life contains mechanisms that interpret states as signals,
+            instructions, representations, or constraints.</li>
+          <li><strong>Semantic relay:</strong> life transmits meaningful states internally, externally, or both.</li>
+          <li><strong>Semantic continuity:</strong> life preserves enough organization across time for semantic
+            processes to contribute to continued identity, adaptation, or lineage.</li>
+          <li><strong>Semantic dependence:</strong> a living process may be autonomous or dependent, provided that its
+            semantic organization remains active within a larger living network.</li>
+        </ol>
+
+        <p>
+          The fifth axiom is especially important. Many traditional definitions implicitly assume
+          that life must be self-sufficient. However, terrestrial life often exists through
+          dependence. Parasites, endosymbionts, mitochondria, chloroplasts, viruses, and
+          multicellular cells all depend on larger systems. Semantic Vitality treats dependence as
+          a structural relation rather than an automatic disqualification. A dependent entity may
+          still participate in life if its internal organization carries meaningful instructions,
+          responds to interpreted signals, or contributes to a larger semantic network.
+        </p>
+      </section>
+
+      <section id="religion-uap">
+        <h2>4. Scope: Metaphysics, Extraterrestrial Life, and UAP</h2>
+
+        <h3>Metaphysical and Religious Scope</h3>
+
+        <p>
+          The definition of life has not only scientific importance, but also religious, spiritual,
+          and cultural significance. In many religious traditions, life is not defined merely by
+          biological activity. It is often associated with a soul, spirit, divine breath, sacred
+          animation, or participation in a transcendent order. For example, philosophical and
+          religious discussions of the soul commonly treat it as the immaterial essence or vital
+          principle of a living being, sometimes understood as that which gives individuality,
+          consciousness, or continuity beyond bodily death
+          <a class="cite" href="#ref-13">[13]</a>. These traditions raise important metaphysical
+          questions: What is the soul? Can spirit exist apart from the body? Does life require
+          divine origin? What happens to life after biological death?
+        </p>
+
+        <p>
+          Semantic Vitality does not attempt to answer those theological or metaphysical questions.
+          It is not a theory of the soul, a theory of divine creation, or a theory of spiritual
+          entities. Instead, Semantic Vitality is an operational and process-based definition of
+          life. It asks what living systems <em>do</em>: they generate, maintain, interpret, and
+          relay meaningful states across internal and external pathways. In this sense, the
+          framework is deliberately narrower than religious accounts of life. A religious theory
+          may explain why life exists, whether life has sacred value, or whether living beings
+          possess souls. Semantic Vitality instead explains how life can be recognized through
+          semantic activity.
+        </p>
+
+        <p>
+          This distinction is important because scientific definitions and religious definitions
+          operate at different explanatory levels. A biological or astrobiological definition
+          usually attempts to identify observable, testable, and repeatable features of living
+          systems. A religious definition may include invisible, immaterial, or transcendent
+          realities that are meaningful within a theological worldview but are not directly
+          measurable by empirical methods. Semantic Vitality therefore does not deny religious
+          interpretations of life. Rather, it brackets them. The framework remains focused on the
+          semantic behavior of living systems: internal regulation, external signaling, adaptive
+          interpretation, continuity of information, and meaning-bearing interaction with an
+          environment.
+        </p>
+
+        <h3>Extraterrestrial Life and UAP Context</h3>
+        <p>
+          This distinction also matters for contemporary debates about unidentified anomalous
+          phenomena (UAPs), extraterrestrial life, and non-human intelligence. In recent years,
+          UAPs have been discussed in official government settings, including a July 26, 2023
+          hearing of the U.S. House Committee on Oversight and Accountability titled
+          “Unidentified Anomalous Phenomena: Implications on National Security, Public Safety, and
+          Government Transparency” <a class="cite" href="#ref-14">[14]</a>. A later House
+          hearing, “Unidentified Anomalous Phenomena: Exposing the Truth,” was held on
+          November 13, 2024 <a class="cite" href="#ref-15">[15]</a>. These hearings did
+          not establish the existence of extraterrestrial life, but they show that questions about
+          non-human technology, anomalous observation, and possible non-human intelligence have
+          entered public institutional discussion.
+        </p>
+
+        <p>
+          NASA’s independent UAP study also emphasizes caution. Its 2023 report states that there
+          is no conclusive evidence in the peer-reviewed scientific literature suggesting an
+          extraterrestrial origin for UAP, while also recommending more rigorous data collection
+          and analysis <a class="cite" href="#ref-16">[16]</a>, <a class="cite" href="#ref-17">[17]</a>. This caution is
+          compatible with Semantic
+          Vitality. If an unknown system were ever encountered—whether biological, artificial,
+          extraterrestrial, or otherwise anomalous—the first question would not be whether it has a
+          soul, whether it fits a familiar Earth biology checklist, or whether it resembles human
+          intelligence. The first Semantic Vitality question would be: does the system sustain
+          semantic processes?
+        </p>
+
+        <p>
+          Under this framework, a possible extraterrestrial or non-human system would be evaluated
+          by its capacity to create, preserve, interpret, and transmit meaningful states. Evidence
+          might include regulated internal organization, adaptive response to environmental
+          signals, symbolic or signal-based communication, self-maintenance, technological
+          production, ecological modification, or stable information transfer across time. Such
+          criteria would not prove spirituality, consciousness, or personhood. However, they would
+          provide an operational basis for asking whether the system participates in life-like
+          semantic organization.
+        </p>
+
+        <p>
+          Thus, Semantic Vitality should be understood as a semantic definition of life, not a
+          spiritual definition of life. It does not reduce religious life to biology, nor does it
+          reduce the soul to information processing. Instead, it defines the class of processes by
+          which living systems act as meaning-bearing systems. Religious accounts may address the
+          ultimate source, purpose, or destiny of life. Semantic Vitality addresses the observable
+          structure of living activity: the production, interpretation, and relay of semantics
+          across micro/macro and internal/external dimensions.
+        </p>
+      </section>
+
+      <section id="case-studies">
+        <h2>5. Case Studies</h2>
+        <p>
+          Semantic Vitality is useful only if it clarifies difficult cases. This section applies the
+          framework to organisms and biological agents that strain older definitions.
+        </p>
+
+        <h3>Sterile Organisms</h3>
+        <p>
+          Sterile organisms such as mules create problems for reproduction-based definitions
+          because they cannot produce fertile offspring. Yet ordinary biological judgment treats
+          them as alive. Semantic Vitality explains why. A mule continues to metabolize, maintain
+          homeostasis, interpret sensory information, regulate immune responses, coordinate
+          movement, and interact with its environment. Its inability to reproduce does not erase
+          its micro-internal cellular semantics or its macro-internal cognition and behavior.
+          Reproduction is one powerful semantic pathway, but it is not the only pathway by which
+          life persists.
+        </p>
+
+        <h3>Viruses</h3>
+        <p>
+          Viruses are difficult because they contain genetic information and undergo evolution,
+          yet lack independent metabolism and require host cells for replication. Under Semantic
+          Vitality, viruses are best classified as dependent semantic life-processes or borderline
+          biological agents. Their genomes carry instructions that become active only when
+          interpreted by host machinery. The virus therefore lacks full autonomous semantic
+          vitality, but it participates in living networks by redirecting cellular interpretation
+          toward viral production. This classification preserves the intuition that viruses are
+          biologically meaningful while avoiding the stronger claim that they are fully independent
+          organisms.
+        </p>
+
+        <h3>Obligate Parasites and Endosymbionts</h3>
+        <p>
+          Obligate parasites depend on hosts for nutrients, reproduction, or completion of their
+          life cycles. Similarly, obligate endosymbionts may have reduced genomes and may be unable
+          to survive independently outside their hosts. These cases are awkward for
+          self-sufficiency-based definitions, but they are natural under Semantic Vitality. The
+          parasite or symbiont remains alive when it preserves internal organization, interprets
+          host-derived signals, transmits hereditary information, and contributes to a host-mediated
+          life process. Dependence does not eliminate life; it distributes life across a coupled
+          semantic system.
+        </p>
+
+        <p>
+          Endosymbionts such as <em>Buchnera</em> illustrate this point. Moran’s review describes
+          the coevolution of bacterial endosymbionts and phloem-feeding insects, including the
+          highly integrated <em>Buchnera</em>-aphid relationship
+          <a class="cite" href="#ref-11">[11]</a>. Comparative work on another obligate
+          endosymbiont, <em>Blochmannia floridanus</em>, likewise illustrates the extensive genome
+          reduction that can accompany long-term host dependence
+          <a class="cite" href="#ref-12">[12]</a>. Semantic Vitality therefore treats such
+          endosymbionts as living components of integrated systems rather than as failed autonomous
+          organisms.
+        </p>
+
+        <h3>Plasmodial Slime Molds</h3>
+        <p>
+          Plasmodial slime molds such as <em>Physarum polycephalum</em> lack brains, yet they
+          display adaptive behavior and learning-like dynamics. Such cases show that semantic
+          organization does not require a nervous system. A slime mold can process environmental
+          information through body-wide chemical and spatial organization, producing adaptive
+          movement and network formation. Work on slime mold behavior and oscillatory dynamics
+          supports the idea that cognition-like functions can emerge from non-neural biological
+          organization <a class="cite" href="#ref-8">[8]</a>. Semantic Vitality
+          classifies slime molds as alive through micro-internal, macro-internal, and macro-external
+          semantics.
+        </p>
+
+        <h3>Minimal and Provisional Lineages</h3>
+        <p>
+          Recently proposed ultra-reduced lineages, such as <em>Candidatus Sukunaarchaeum
+            mirabile</em>, are useful conceptual tests because they push the lower boundary of
+          cellular complexity. The biological status should be treated cautiously because the
+          cited report is a preprint. In addition, the SeqCode Registry entry currently lists the
+          name as having no standing or validity
+          <a class="cite" href="#ref-9">[9]</a>, <a class="cite" href="#ref-10">[10]</a>. Nevertheless, such cases
+          illustrate how Semantic Vitality can evaluate minimal life. If an ultra-reduced organism
+          preserves a genome, interprets molecular signals, participates in metabolism through a
+          host-associated system, and maintains enough organization to continue its lineage, then
+          it may count as a dependent living semantic process even if it lacks many features of
+          free-living cells.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>How Semantic Vitality handles difficult cases for traditional definitions of life.</caption>
+            <thead>
+              <tr>
+                <th>Case Study</th>
+                <th>Problem for Earlier Definitions</th>
+                <th>Semantic Vitality Classification</th>
+                <th>Explanation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Obligate parasites</td>
+                <td>Depend on hosts for nutrients, reproduction, or life-cycle completion.</td>
+                <td>Alive through dependent micro- and macrosemantic processes.</td>
+                <td>They interpret host-derived signals, regulate development, and transmit hereditary information.
+                  Dependence relocates part of the life-process into a host-mediated system.</td>
+              </tr>
+              <tr>
+                <td>Plasmodial slime molds</td>
+                <td>Lack a brain or nervous system but display adaptive behavior.</td>
+                <td>Alive through micro-internal, macro-internal, and macro-external semantics.</td>
+                <td>Body-wide chemical and spatial organization processes environmental information and produces
+                  adaptive movement.</td>
+              </tr>
+              <tr>
+                <td><em>Candidatus Sukunaarchaeum mirabile</em></td>
+                <td>Proposed ultra-reduced archaeon with strong dependence on other systems.</td>
+                <td>Provisional dependent semantic life-process.</td>
+                <td>If confirmed, it would represent a minimal semantic system whose genome and cellular machinery
+                  remain interpretable inside a larger biological context.</td>
+              </tr>
+              <tr>
+                <td>Obligate endosymbionts</td>
+                <td>Reduced genomes and loss of independent survival.</td>
+                <td>Alive through integrated micro-internal and micro-external semantics.</td>
+                <td>Their life is not autonomous in isolation, but their semantic function persists inside a
+                  host-symbiont network.</td>
+              </tr>
+              <tr>
+                <td>Viruses</td>
+                <td>Evolve and carry genetic information, but lack independent metabolism.</td>
+                <td>Borderline or dependent semantic life-process.</td>
+                <td>Viral genomes contain semantic instructions that become active when interpreted by host machinery.
+                </td>
+              </tr>
+              <tr>
+                <td>Sterile organisms</td>
+                <td>Reproduction-based definitions may exclude them.</td>
+                <td>Alive through internal and external semantic organization.</td>
+                <td>Sterility does not remove metabolism, cognition, homeostasis, sensation, communication, or cellular
+                  regulation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="ai-agi">
+        <h2>6. Artificial Intelligence and AGI</h2>
+
+        <p>
+          Semantic Vitality also provides a careful framework for discussing artificial
+          intelligence. Current AI systems process representations and generate meaningful outputs
+          for human users, but this does not by itself make them alive. Most present systems do not
+          maintain themselves, regulate their own material substrate, preserve a stable
+          self-organizing identity, or autonomously regulate processes required for their own
+          continued organization.
+          They are semantic processors, but they are not yet semantically vital in the full sense.
+        </p>
+
+        <p>
+          The distinction matters because it avoids two extremes. The first extreme is biological
+          exclusivism: the claim that life must always be carbon-based, cellular, and historically
+          continuous with Earth biology. This may be too narrow for astrobiology and artificial
+          life. The second extreme is informational inflation: the claim that any system that
+          stores or processes information is alive. This is too broad because it would include
+          books, databases, static code, and ordinary machines. Semantic Vitality avoids both
+          extremes by requiring sustained, organized, self-relevant semantic processes.
+        </p>
+
+        <p>
+          A future AGI could become a candidate for artificial life if it satisfied several
+          conditions. It would need persistent internal semantic regulation, not merely input-output
+          behavior. It would need self-maintaining organization, meaning that its internal processes
+          contribute to preserving the system as an organized agent. It would need adaptive
+          interpretation, allowing it to transform new data into action-relevant meaning. It would
+          also need external semantic relay, allowing it to communicate, coordinate, or modify its
+          environment in ways that support continued organization. If such a system also possessed
+          repair, reproduction, or open-ended developmental capacities, then the case for artificial
+          life would become stronger.
+        </p>
+
+        <p>
+          This does not imply that AGI must imitate biology exactly. Artificial semantic vitality
+          may not require DNA, cells, proteins, or metabolism in the terrestrial sense. However, it
+          would require functional analogues of interpretation, regulation, continuity, and
+          semantic relay. A digital system that only answers prompts would fall short. A robot or
+          distributed artificial agent that monitors its own state, repairs its components,
+          preserves an identity across time, interprets environmental signals, learns from
+          experience, and acts to maintain its own organization would be a more serious candidate.
+        </p>
+
+        <p>
+          In this respect, Semantic Vitality turns the question “Is AI alive?” into a more precise
+          question: <em>Which semantic dimensions does the system possess, and are those dimensions
+            self-maintaining or merely externally imposed?</em> Current AI systems may possess
+          macro-external semantic behavior because they communicate with users. Some may also
+          contain computational micro-internal representations. But without robust self-maintenance
+          and internal semantic continuity, they remain artificial semantic tools rather than
+          artificial living systems.
+        </p>
+      </section>
+
+      <section id="discussion">
+        <h2>7. Discussion</h2>
+
+        <p>
+          Semantic Vitality has several advantages over earlier definitions. First, it explains why
+          reproduction is important without making it universally necessary. Reproduction is a
+          semantic process because it transmits organized information across generations, but
+          individual reproduction is not required for individual life. Second, it explains why
+          metabolism matters without reducing life to energy flow. Metabolism supports semantic
+          organization, but energy dissipation alone is not enough. Third, it explains why
+          communication and cognition are continuous with cellular life rather than separate from
+          it. A cell interpreting molecular signals and a human interpreting language are
+          different-scale expressions of semantic vitality.
+        </p>
+
+        <p>
+          The framework is also useful for astrobiology. A life-detection mission cannot assume
+          that extraterrestrial organisms will use DNA, proteins, or familiar cellular structures.
+          It can, however, search for evidence of organized semantic processes: persistent patterns
+          that are not merely physical regularities, but that appear to be maintained, interpreted,
+          and transmitted by a system. Such evidence might include regulated chemical cycles,
+          boundary-maintaining structures, adaptive responses to environmental variation, or
+          repeated transformations that preserve functional information across time.
+        </p>
+
+        <p>
+          There are also limitations. The term “semantics” can be ambiguous, especially because
+          meaning is sometimes treated as a human or linguistic phenomenon. Semantic Vitality uses
+          a broader biological sense: a state is semantic when it functions as an interpretable
+          signal, instruction, representation, or constraint within an organized system. This usage
+          must be carefully distinguished from human language semantics. A codon does not have
+          meaning in the same way a sentence has meaning, but both participate in systems where
+          patterns are interpreted according to rules and consequences. The relevant scientific
+          question is therefore not whether a pattern can be described by an observer as
+          informative, but whether the system itself contains organized mechanisms that use the
+          pattern in context-sensitive regulation, adaptation, continuity, or lineage.
+        </p>
+
+        <p>
+          Another challenge is measurement. To use Semantic Vitality scientifically, researchers
+          would need operational indicators of semantic generation, interpretation, relay, and
+          continuity. Possible indicators include stable information-bearing structures, regulatory
+          feedback, context-sensitive response, error correction, adaptive modification, and
+          dependence between signal and function. These indicators would not be a final definition
+          by themselves, but they would help convert the axiom into testable criteria.
+        </p>
+
+        <p>
+          Finally, Semantic Vitality should be understood as a framework rather than a completed
+          theory. Cleland and Chyba are correct that a mature theory of life may require deeper
+          scientific discoveries <a class="cite" href="#ref-3">[3]</a>. Semantic
+          Vitality is intended as a working axiom that organizes known cases and clarifies future
+          questions. It provides a language for comparing biological life, minimal life,
+          artificial life, and possible extraterrestrial life without assuming that all living
+          systems must share the same material substrate.
+        </p>
+      </section>
+
+      <section id="conclusion">
+        <h2>8. Conclusion</h2>
+
+        <p>
+          This article introduced Semantic Vitality as a semantic axiom for life. Existing
+          definitions identify essential aspects of living systems, including metabolism,
+          thermodynamic organization, autopoiesis, autonomy, reproduction, and Darwinian evolution.
+          However, each definition faces difficult borderline cases. Sterile organisms challenge
+          reproduction-based definitions. Viruses and endosymbionts challenge autonomy-based
+          definitions. Slime molds challenge nervous-system-centered views of cognition. Artificial
+          intelligence challenges definitions that assume biology must be tied permanently to
+          carbon-based organisms.
+        </p>
+
+        <p>
+          Semantic Vitality reframes life as the sustained creation, interpretation, maintenance,
+          and relay of meaningful states. Its micro/macro and internal/external axes identify four
+          dimensions of living semantic activity: micro-internal, micro-external, macro-internal,
+          and macro-external semantics. These dimensions explain why life can appear differently
+          across cells, organisms, ecological systems, and possible artificial agents. The
+          framework also clarifies that current AI systems are not automatically alive, even if
+          they process semantic information. AI becomes a candidate for life only when semantic
+          processing becomes self-maintaining, internally regulated, and continuous across time.
+        </p>
+
+        <p>
+          The value of Semantic Vitality is that it treats life as a process rather than a fixed
+          material category. Terrestrial life is carbon-based and historically Darwinian, but
+          future discoveries may reveal systems whose mechanisms differ from familiar biology. A
+          definition of life should therefore be broad enough to recognize unfamiliar life, yet
+          strict enough to exclude passive information storage and ordinary computation. Semantic
+          Vitality offers one step toward that balance.
+        </p>
+      </section>
+
+      <section id="references">
+        <h2>9. References</h2>
+        <ol class="references">
+          <li id="ref-1">NASA Astrobiology Program. <span class="ref-title">About: Life Detection Research</span>.
+            Defines life as “a self-sustaining chemical system capable of Darwinian evolution.” Accessed 2026-06-06.
+            n.d. <a href="https://astrobiology.nasa.gov/research/life-detection/about/" target="_blank"
+              rel="noopener">Link</a></li>
+          <li id="ref-2">Erwin Schrödinger. <span class="ref-title">What is Life? The Physical Aspect of the Living
+              Cell</span>. Cambridge University Press, Cambridge. 1944.</li>
+          <li id="ref-3">Carol E. Cleland and Christopher F. Chyba. <span class="ref-title">Defining ‘Life’</span>.
+            Origins of Life and Evolution of the Biosphere, 32(4), 387–393. 2002. <a
+              href="https://doi.org/10.1023/A:1020503324273" target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-4">Edward N. Trifonov. <span class="ref-title">Vocabulary of Definitions of Life Suggests a
+              Definition</span>. Journal of Biomolecular Structure and Dynamics, 29(2), 259–266. 2011. <a
+              href="https://doi.org/10.1080/073911011010524992" target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-5">Humberto R. Maturana and Francisco J. Varela. <span class="ref-title">Autopoiesis and
+              Cognition: The Realization of the Living</span>. D. Reidel Publishing Company, Dordrecht. Boston Studies
+            in the Philosophy of Science, Vol. 42. 1980. <a href="https://doi.org/10.1007/978-94-009-8947-4"
+              target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-6">Gail R. Fleischaker. <span class="ref-title">Origins of Life: An Operational Definition</span>.
+            Origins of Life and Evolution of the Biosphere, 20(2), 127–137. 1990. <a
+              href="https://doi.org/10.1007/BF01808273" target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-7">Kepa Ruiz-Mirazo, Juli Peretó, and Alvaro Moreno. <span class="ref-title">A Universal
+              Definition of Life: Autonomy and Open-Ended Evolution</span>. Origins of Life and Evolution of the
+            Biosphere, 34(3), 323–346. 2004. <a href="https://doi.org/10.1023/B:ORIG.0000016440.53346.dc"
+              target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-8">Aurèle Boussard, Adrian Fessel, Christina Oettmeier, Léa Briard, Hans-Günther Döbereiner, and
+            Audrey Dussutour. <span class="ref-title">Adaptive Behaviour and Learning in Slime Moulds: The Role of
+              Oscillations</span>. Philosophical Transactions of the Royal Society B, 376(1820), 20190757. 2021. <a
+              href="https://doi.org/10.1098/rstb.2019.0757" target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-9">R. Harada et al. <span class="ref-title">A Cellular Entity Retaining Only Its Replicative Core:
+              Hidden Archaeal Lineage with an Ultra-Reduced Genome</span>. bioRxiv preprint. 2025. <a
+              href="https://doi.org/10.1101/2025.05.02.651781" target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-10">SeqCode Registry. <span class="ref-title"><em>Sukunaarchaeum mirabile</em></span>. Accessed
+            2026-06-06. 2025. <a href="https://registry.seqco.de/names/51493" target="_blank" rel="noopener">Link</a>
+          </li>
+          <li id="ref-11">Nancy A. Moran. <span class="ref-title">The Coevolution of Bacterial Endosymbionts and
+              Phloem-Feeding Insects</span>. Annals of the Missouri Botanical Garden, 88(1), 35–44. 2001.</li>
+          <li id="ref-12">Rosario Gil et al. <span class="ref-title">The Genome Sequence of <em>Blochmannia
+                floridanus</em>: Comparative Analysis of Reduced Genomes</span>. Proceedings of the National Academy of
+            Sciences, 100(16), 9388–9393. 2003. <a href="https://doi.org/10.1073/pnas.1533499100" target="_blank"
+              rel="noopener">Link</a></li>
+          <li id="ref-13">Encyclopaedia Britannica. <span class="ref-title">Soul: Religion and Philosophy</span>.
+            Accessed 2026-06-06. <a href="https://www.britannica.com/topic/soul-religion-and-philosophy" target="_blank"
+              rel="noopener">Link</a></li>
+          <li id="ref-14">U.S. House Committee on Oversight and Accountability. <span class="ref-title">Unidentified
+              Anomalous Phenomena: Implications on National Security, Public Safety, and Government Transparency</span>.
+            Hearing held July 26, 2023. Accessed 2026-06-06. 2023. <a
+              href="https://oversight.house.gov/hearing/unidentified-anomalous-phenomena-implications-on-national-security-public-safety-and-government-transparency/"
+              target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-15">U.S. House Committee on Oversight and Accountability. <span class="ref-title">Unidentified
+              Anomalous Phenomena: Exposing the Truth</span>. Hearing held November 13, 2024. Accessed 2026-06-06. 2024.
+            <a href="https://oversight.house.gov/hearing/unidentified-anomalous-phenomena-exposing-the-truth/"
+              target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-16">NASA. <span class="ref-title">Unidentified Anomalous Phenomena</span>. Accessed 2026-06-06.
+            2023. <a href="https://science.nasa.gov/uap/" target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-17">NASA Unidentified Anomalous Phenomena Independent Study Team. <span
+              class="ref-title">Unidentified Anomalous Phenomena Independent Study Team Report</span>. Published
+            September 14, 2023. Accessed 2026-06-06. 2023. <a
+              href="https://science.nasa.gov/wp-content/uploads/2023/09/uap-independent-study-team-final-report.pdf"
+              target="_blank" rel="noopener">Link</a></li>
+
+          <li id="ref-18">Claus Emmeche. <span class="ref-title">Defining Life as a Semiotic Phenomenon</span>.
+            <em>Cybernetics &amp; Human Knowing</em>, 5(1), 3–17. 1998. <a
+              href="https://researchprofiles.ku.dk/en/publications/defining-life-as-a-semiotic-phenomenon/"
+              target="_blank" rel="noopener">Link</a></li>
+          <li id="ref-19">Marcello Barbieri. <span class="ref-title">Biosemiotics: A New Understanding of Life</span>.
+            <em>Naturwissenschaften</em>, 95(7), 577–599. 2008. <a href="https://doi.org/10.1007/s00114-008-0368-x"
+              target="_blank" rel="noopener">DOI</a></li>
+          <li id="ref-20">Marcello Barbieri. <span class="ref-title">The Concepts of Code Biology</span>.
+            <em>BioSystems</em>, 248, 105400. 2025. <a href="https://doi.org/10.1016/j.biosystems.2025.105400"
+              target="_blank" rel="noopener">DOI</a></li>
+        </ol>
+      </section>
+
+    </main>
+
+    <footer>
+      © Jean-Luc DeRieux · Semantic Vitality
+    </footer>
+  </div>
+</body>
+
+</html>
